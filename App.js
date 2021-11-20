@@ -1,14 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import GlobalProvider from './src/Context/Provider';
+import AppNavigation from './src/Navigations';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <View>
-      <Text>Heloo</Text>
-    </View>
+    <SafeAreaProvider>
+      <GlobalProvider>
+        <AppNavigation />
+      </GlobalProvider>
+    </SafeAreaProvider>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
